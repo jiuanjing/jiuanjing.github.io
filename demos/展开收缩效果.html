@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div {
+        width: 500px;
+        margin: 100px auto 0;
+        background: #ddd;
+        border: 10px solid #ccc;
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 25px;
+    }
+</style>
+<body>
+<div>
+    <span>
+        设置在通过多功能框搜索时所用的搜索引擎。
+管理搜索引擎...
+其他人
+用户1（当前）启用访客浏览
+允许任何人向 Chrome 添加用户
+添加用户… 修改... 移除… 导入书签和设置...
+默认浏览器
+将 Google Chrome 浏览器设为默认浏览器
+Google Chrome目前不是默认浏览器。
+显示高级设置...
+    </span>
+    <a href="" id="a">收缩</a>
+</div>
+</body>
+<script>
+    var span = document.getElementsByTagName('span')[0];
+    var a = document.getElementById('a');
+    var sw = true;
+    var content = span.innerHTML.trim();
+    a.onclick=function () {
+        if (sw){
+          span.innerHTML = content.substring(0,20);
+            a.innerHTML = '展开';
+
+        }else {
+            span.innerHTML = content;
+        }
+        sw = !sw;
+        return false;
+    }
+
+</script>
+</html>
